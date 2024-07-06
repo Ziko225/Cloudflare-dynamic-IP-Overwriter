@@ -81,11 +81,11 @@ const compareIPs = async (beforeIp) => {
         await dnsSettings.map(async (record, index) => {
             await new Promise((resolve) => setTimeout(resolve, index * 2000));
 
-            const dnsInfo = await getDnsInfo(record);
-
-            if (!record || record.dns_record_id) {
+            if (!record || !record.dns_record_id) {
                 return;
             }
+
+            const dnsInfo = await getDnsInfo(record);
 
             if (!dnsInfo) {
                 console.log(`${getTime()} | ERROR: Record with ID:${record.dns_record_id} unreadable`);
