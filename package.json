@@ -1,0 +1,21 @@
+{
+  "name": "cloudflare-dynamic-ip-updater",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "start": "node script.js",
+    "dev": "nodemon script.js",
+    "linux": "pm2 start script.js",
+    "getDNS": "node dnsInfo.js"
+  },
+  "keywords": [],
+  "author": "Nazar Bychyk",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "nodemon": "^3.1.4",
+    "public-ip": "^6.0.2"
+  }
+}
