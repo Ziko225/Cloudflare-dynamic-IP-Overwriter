@@ -46,7 +46,7 @@ const OverwriteDNS = async (record) => {
 
         console.log(`${getTime()} | SUCCESS | Record is overwritten | ID: ${record.dns_record_id}`);
     } catch (error) {
-        console.error(`${getTime()} | ERROR, Record is not overwritten | ID: ${record.dns_record_id}`);
+        console.error(`${getTime()} | ERROR, Record is not overwritten | ID: ${record.dns_record_id} | Message: ${error?.message}`);
     }
 };
 
